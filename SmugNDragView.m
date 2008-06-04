@@ -15,11 +15,15 @@
 @implementation SmugNDragView(SmugMugURL)
 
 - (NSString *)linkForURL:(NSURL *)url {
-	NSString *image = [url fragment];
 	NSString *host = [url host];
 	NSString *path = [url path];
+	NSString *image = [url fragment];
+
+	if(host == nil || path == nil || image == nil) {
+		return nil;
+	}
 	
-	NSString *format = @"<a href='http://%@%@#%@'><img src='http://%@/photos/%@-M.jpg'/></a>";
+	NSString *format = @"<a href='http://%@%@#%@'><img src='http://%@/photos/%@-M.jpg'></a>";
 	NSString *link = [NSString stringWithFormat:format, host, path, image, host, image];
 	return link;
 }
@@ -66,8 +70,7 @@
 		[self setNeedsDisplay:YES];
 	}
 
-    if ((NSDragOperationGeneric & [sender draggingSourceOperationMask]) == NSDragOperationGeneric)
-    {
+    if ((NSDragOperationGeneric & [sender draggingSourceOperationMask]) == NSDragOperationGeneric) {
 		//this means that the sender is offering the type of operation we want
 		//return that we want the NSDragOperationGeneric operation that they 
 		//are offering
@@ -105,25 +108,23 @@
     NSString *desiredType = [pb availableTypeFromArray:types];
 	if ([desiredType isEqualToString:NSStringPboardType]) {
 		NSString *s = [pb stringForType:NSStringPboardType];
-		NSURL *u = [NSURL URLWithString:s];
-		if(nil == u) {
-			NSRunAlertPanel(@"Malformed URL",
-				[NSString stringWithFormat:@"Sorry, but I failed to parse the url %@", s], nil, nil, nil);
+		NSString *link = [self linkForURL:[NSURL URLWithString:s]];
+		if(nil == link) {
+//			NSRunAlertPanel(@"Malformed URL",
+//				[NSString stringWithFormat:@"Sorry, but I failed to parse the url %@", s], nil, nil, nil);
 			return NO;
 		}
-		NSString *link = [self linkForURL:u];
 		pb = [NSPasteboard generalPasteboard];
 		[pb declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
 		[pb setString:link forType:NSStringPboardType];
 	} else {
 		return NO;
 	}
-    [self setNeedsDisplay:YES];    //redraw us with the new image
+    [self setNeedsDisplay:YES];
     return YES;
 }
 
 - (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
-    //re-draw the view with our new data
     [self setNeedsDisplay:YES];
 }
 
