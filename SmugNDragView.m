@@ -53,12 +53,10 @@
 		[super drawRect:rect];
 		// use the following for a transparent ring
 		[[[NSColor keyboardFocusIndicatorColor] colorWithAlphaComponent:0.55] set];
-		// or the following for a solid ring
-		// [[NSColor keyboardFocusIndicatorColor] set];
 		[NSBezierPath setDefaultLineWidth:6.0];
 		[NSBezierPath strokeRect:bounds];
 	} else {
-		[[NSColor whiteColor] set];
+		[[NSColor orangeColor] set];
 		[NSBezierPath fillRect:bounds];
 		[super drawRect:rect];
 	}
@@ -71,13 +69,9 @@
 	}
 
     if ((NSDragOperationGeneric & [sender draggingSourceOperationMask]) == NSDragOperationGeneric) {
-		//this means that the sender is offering the type of operation we want
-		//return that we want the NSDragOperationGeneric operation that they 
-		//are offering
+		// accept it
         return NSDragOperationGeneric;
     } else {
-		//since they aren't offering the type of operation we want, we have 
-		//to tell them we aren't interested
         return NSDragOperationNone;
     }
 }
