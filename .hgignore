@@ -4,3 +4,4 @@ syntax: glob
 *.orig
 *.tmproj
 build
+.DS_Store

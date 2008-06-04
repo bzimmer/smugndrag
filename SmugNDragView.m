@@ -110,8 +110,6 @@
 		NSString *s = [pb stringForType:NSStringPboardType];
 		NSString *link = [self linkForURL:[NSURL URLWithString:s]];
 		if(nil == link) {
-//			NSRunAlertPanel(@"Malformed URL",
-//				[NSString stringWithFormat:@"Sorry, but I failed to parse the url %@", s], nil, nil, nil);
 			return NO;
 		}
 		pb = [NSPasteboard generalPasteboard];
