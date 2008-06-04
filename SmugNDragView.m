@@ -23,6 +23,7 @@
 		return nil;
 	}
 	
+	// @todo make this a preference
 	NSString *format = @"<a href='http://%@%@#%@'><img src='http://%@/photos/%@-M.jpg'></a>";
 	NSString *link = [NSString stringWithFormat:format, host, path, image, host, image];
 	return link;
@@ -56,6 +57,7 @@
 		[NSBezierPath setDefaultLineWidth:6.0];
 		[NSBezierPath strokeRect:bounds];
 	} else {
+		// @todo make this a preference
 		[[NSColor orangeColor] set];
 		[NSBezierPath fillRect:bounds];
 		[super drawRect:rect];
@@ -76,10 +78,6 @@
     }
 }
 
-- (NSDragOperation)draggingUpdated:(id <NSDraggingInfo>)sender {
-	return [self draggingEntered:sender];
-}
-
 - (void)draggingExited:(id <NSDraggingInfo>)sender {
 	[self setHighlighted:NO];
 	[self setNeedsDisplay:YES];
@@ -96,9 +94,7 @@
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
     NSPasteboard *pb = [sender draggingPasteboard];
-	//gets the dragging-specific pasteboard from the sender
     NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
-	//a list of types that we can accept
     NSString *desiredType = [pb availableTypeFromArray:types];
 	if ([desiredType isEqualToString:NSStringPboardType]) {
 		NSString *s = [pb stringForType:NSStringPboardType];
