@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88298F190DF6E44700A1B47D /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 88298F180DF6E44700A1B47D /* Credits.html */; };
 		88417EB30DF614620085D890 /* SmugNDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88417EB20DF614620085D890 /* SmugNDragView.m */; };
 		88855B560DF6E2B2008E90FE /* SmugNDrag.icns in Resources */ = {isa = PBXBuildFile; fileRef = 88855B550DF6E2B2008E90FE /* SmugNDrag.icns */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -24,6 +25,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* SmugNDrag_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmugNDrag_Prefix.pch; sourceTree = "<group>"; };
+		88298F180DF6E44700A1B47D /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		88417EB10DF614620085D890 /* SmugNDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmugNDragView.h; sourceTree = "<group>"; };
 		88417EB20DF614620085D890 /* SmugNDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmugNDragView.m; sourceTree = "<group>"; };
 		88855B550DF6E2B2008E90FE /* SmugNDrag.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SmugNDrag.icns; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88298F180DF6E44700A1B47D /* Credits.html */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				88855B550DF6E2B2008E90FE /* SmugNDrag.icns */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -165,6 +168,7 @@
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				88855B560DF6E2B2008E90FE /* SmugNDrag.icns in Resources */,
+				88298F190DF6E44700A1B47D /* Credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
