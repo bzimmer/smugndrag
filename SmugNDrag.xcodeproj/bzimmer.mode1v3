@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -269,11 +271,13 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>885570F90DF735E80072FD8B</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>9</integer>
 									<integer>6</integer>
 									<integer>5</integer>
 									<integer>0</integer>
@@ -310,8 +314,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -329,17 +331,17 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8855713B0DF740470072FD8B</string>
+										<string>885571450DF7416D0072FD8B</string>
 										<key>history</key>
 										<array>
 											<string>8800B7D40DF70045005BDFA4</string>
 											<string>8800B7D50DF70045005BDFA4</string>
 											<string>887E7D200DF71AF9001C07C1</string>
 											<string>885571030DF735F40072FD8B</string>
-											<string>885571040DF735F40072FD8B</string>
 											<string>885571050DF735F40072FD8B</string>
 											<string>885571060DF735F40072FD8B</string>
-											<string>885571070DF735F40072FD8B</string>
+											<string>885571420DF7416D0072FD8B</string>
+											<string>885571430DF7416D0072FD8B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -358,6 +360,8 @@
 											<string>885571100DF735F40072FD8B</string>
 											<string>885571120DF735F40072FD8B</string>
 											<string>885571130DF735F40072FD8B</string>
+											<string>8855713F0DF740C40072FD8B</string>
+											<string>885571440DF7416D0072FD8B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
