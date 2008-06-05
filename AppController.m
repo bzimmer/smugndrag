@@ -11,8 +11,8 @@
 @implementation AppController
 
 - (void)awakeFromNib {
-    [imageSize removeAllItems];
-    [imageSize addItemsWithTitles:[NSArray arrayWithObjects:@"S", @"M", @"L", @"XL", nil]];
+  [imageSize removeAllItems];
+  [imageSize addItemsWithTitles:[NSArray arrayWithObjects:@"S", @"M", @"L", @"XL", nil]];
   
   // why isn't this automatically done with NSUserDefaultsController?
   NSString *pref = [[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"];

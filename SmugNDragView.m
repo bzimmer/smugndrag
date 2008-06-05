@@ -17,15 +17,15 @@
 @synthesize highlighted;
 
 - (id)initWithFrame:(NSRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
+  self = [super initWithFrame:frame];
+  if (self) {
     [self registerForDraggedTypes:[NSArray arrayWithObjects:NSStringPboardType, nil]];
   }
-    return self;
+  return self;
 }
 
 - (void)dealloc {
-    [self unregisterDraggedTypes];
+  [self unregisterDraggedTypes];
   [super dealloc];
 }
 
@@ -51,12 +51,12 @@
     [self setNeedsDisplay:YES];
   }
 
-    if ((NSDragOperationGeneric & [sender draggingSourceOperationMask]) == NSDragOperationGeneric) {
+  if ((NSDragOperationGeneric & [sender draggingSourceOperationMask]) == NSDragOperationGeneric) {
     // accept it
-        return NSDragOperationGeneric;
-    } else {
-        return NSDragOperationNone;
-    }
+    return NSDragOperationGeneric;
+  } else {
+    return NSDragOperationNone;
+  }
 }
 
 - (void)draggingExited:(id <NSDraggingInfo>)sender {
@@ -70,34 +70,36 @@
 }
 
 - (BOOL)prepareForDragOperation:(id <NSDraggingInfo>)sender {
-    return YES;
+  return YES;
 }
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
-    NSPasteboard *pb = [sender draggingPasteboard];
-    NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
-    NSString *desiredType = [pb availableTypeFromArray:types];
+  NSPasteboard *pb = [sender draggingPasteboard];
+  NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
+  NSString *desiredType = [pb availableTypeFromArray:types];
+  
   if ([desiredType isEqualToString:NSStringPboardType]) {
-      if(![[self delegate] smugNDragURLDidChange:[pb stringForType:NSStringPboardType]]) {
+    if(![[self delegate] smugNDragURLDidChange:[pb stringForType:NSStringPboardType]]) {
       return NO;
     }
   } else {
     return NO;
   }
-    [self setNeedsDisplay:YES];
-    return YES;
+  
+  [self setNeedsDisplay:YES];
+  return YES;
 }
 
 - (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
-    [self setNeedsDisplay:YES];
+  [self setNeedsDisplay:YES];
 }
 
 - (id)delegate {
-    return delegate;
+  return delegate;
 }
  
 - (void)setDelegate:(id)newDelegate {
-    delegate = newDelegate;
+  delegate = newDelegate;
 }
 
 @end
