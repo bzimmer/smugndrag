@@ -24,7 +24,7 @@
 	}
 	
 	// @todo make this a preference
-	NSString *format = @"<a href='http://%@%@#%@'><img src='http://%@/photos/%@-M.jpg'></a>";
+	NSString *format = @"<a href='http://%@%@#%@'><img src='http://%@/photos/%@-M.jpg' alt=''></a>";
 	NSString *link = [NSString stringWithFormat:format, host, path, image, host, image];
 	return link;
 }
