@@ -8,27 +8,8 @@
 
 #import "SmugNDragView.h"
 
-@interface SmugNDragView(SmugMugURL)
-- (NSString *)linkForURL:(NSURL *)url;
-@end
-
-@implementation SmugNDragView(SmugMugURL)
-
-- (NSString *)linkForURL:(NSURL *)url {
-	NSString *host = [url host];
-	NSString *path = [url path];
-	NSString *image = [url fragment];
-
-	if(host == nil || path == nil || image == nil) {
-		return nil;
-	}
-	
-	// @todo make this a preference
-	NSString *format = @"<a href='http://%@%@#%@'><img src='http://%@/photos/%@-M.jpg' alt=''></a>";
-	NSString *link = [NSString stringWithFormat:format, host, path, image, host, image];
-	return link;
-}
-
+@interface NSObject (SmugNDrawViewDelegate)
+- (BOOL)handleDrag:(NSString *)draggedString;
 @end
 
 @implementation SmugNDragView
@@ -97,14 +78,9 @@
     NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
     NSString *desiredType = [pb availableTypeFromArray:types];
 	if ([desiredType isEqualToString:NSStringPboardType]) {
-		NSString *s = [pb stringForType:NSStringPboardType];
-		NSString *link = [self linkForURL:[NSURL URLWithString:s]];
-		if(nil == link) {
+	    if(![[self delegate] handleDrag:[pb stringForType:NSStringPboardType]]) {
 			return NO;
 		}
-		pb = [NSPasteboard generalPasteboard];
-		[pb declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
-		[pb setString:link forType:NSStringPboardType];
 	} else {
 		return NO;
 	}
@@ -114,6 +90,14 @@
 
 - (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
     [self setNeedsDisplay:YES];
+}
+
+- (id)delegate {
+    return delegate;
+}
+ 
+- (void)setDelegate:(id)newDelegate {
+    delegate = newDelegate;
 }
 
 @end

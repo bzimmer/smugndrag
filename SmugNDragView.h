@@ -9,9 +9,13 @@
 #import <Cocoa/Cocoa.h>
 
 @interface SmugNDragView : NSView {
+	id delegate;
 	BOOL highlighted;
 }
 
 @property (assign) BOOL highlighted;
+
+- (id)delegate;
+- (void)setDelegate:(id)newDelegate;
 
 @end
