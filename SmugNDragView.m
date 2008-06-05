@@ -9,7 +9,7 @@
 #import "SmugNDragView.h"
 
 @interface NSObject (SmugNDrawViewDelegate)
-- (BOOL)handleDrag:(NSString *)draggedString;
+- (BOOL)smugNDragURLDidChange:(NSString *)url;
 @end
 
 @implementation SmugNDragView
@@ -78,7 +78,7 @@
     NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
     NSString *desiredType = [pb availableTypeFromArray:types];
 	if ([desiredType isEqualToString:NSStringPboardType]) {
-	    if(![[self delegate] handleDrag:[pb stringForType:NSStringPboardType]]) {
+	    if(![[self delegate] smugNDragURLDidChange:[pb stringForType:NSStringPboardType]]) {
 			return NO;
 		}
 	} else {

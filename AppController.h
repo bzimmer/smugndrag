@@ -10,10 +10,10 @@
 
 @interface AppController : NSObject {
   IBOutlet id imageSize;
-  IBOutlet id altTag;
+  IBOutlet id imageDescription;
 }
 
-- (BOOL)handleDrag:(NSString *)string;
-- (NSString *)linkForString:(NSString *)string withAltAttribute:(NSString *)alt;
+- (BOOL)smugNDragURLDidChange:(NSString *)string;
+- (NSString *)blogURL:(NSURL *)imageURL withDescription:(NSString *)description;
 
 @end
