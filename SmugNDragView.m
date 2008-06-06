@@ -19,9 +19,11 @@
 - (id)initWithFrame:(NSRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-    [self setTitle:@"Drag Image URL Here"];
+    [self setTitle:@"Drag an Image URL Here"];
+    [self setTitleFont:[NSFont boldSystemFontOfSize:0]];
     [self setTitlePosition:NSBelowTop];
-    [self setBorderType:NSBezelBorder];
+//    [self setBorderType:NSBezelBorder];
+    [[self titleCell] setAlignment:NSCenterTextAlignment];
     [self registerForDraggedTypes:[NSArray arrayWithObjects:NSStringPboardType, nil]];
   }
   return self;
@@ -33,17 +35,16 @@
 }
 
 - (void)drawRect:(NSRect)rect {
-  NSRect bounds = [self bounds];
-  if ([self highlighted]) {
+  if (highlighted) {
     [super drawRect:rect];
-    // use the following for a transparent ring
+    // draw the focus ring
     [[[NSColor keyboardFocusIndicatorColor] colorWithAlphaComponent:0.55] set];
-    [NSBezierPath setDefaultLineWidth:6.0];
-    [NSBezierPath strokeRect:bounds];
+    NSBezierPath *bp = [NSBezierPath bezierPathWithRect:[self bounds]];
+    [bp setLineWidth:6.0];
+    [bp stroke];
   } else {
-    // @todo make this a preference
     [[NSColor clearColor] set];
-    [NSBezierPath fillRect:bounds];
+    [[NSBezierPath bezierPathWithRect:[self bounds]] fill];
     [super drawRect:rect];
   }
 }
