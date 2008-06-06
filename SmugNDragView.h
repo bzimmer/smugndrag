@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SmugNDragView : NSView {
+@interface SmugNDragView : NSBox {
   id delegate;
   BOOL highlighted;
 }

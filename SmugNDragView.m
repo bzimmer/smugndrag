@@ -19,6 +19,9 @@
 - (id)initWithFrame:(NSRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
+    [self setTitle:@"Drag Image URL Here"];
+    [self setTitlePosition:NSBelowTop];
+    [self setBorderType:NSBezelBorder];
     [self registerForDraggedTypes:[NSArray arrayWithObjects:NSStringPboardType, nil]];
   }
   return self;
@@ -39,7 +42,7 @@
     [NSBezierPath strokeRect:bounds];
   } else {
     // @todo make this a preference
-    [[NSColor orangeColor] set];
+    [[NSColor clearColor] set];
     [NSBezierPath fillRect:bounds];
     [super drawRect:rect];
   }
