@@ -5,3 +5,5 @@ syntax: glob
 *.tmproj
 build
 .DS_Store
+SmugNDrag.xcodeproj/bzimmer.*
+
