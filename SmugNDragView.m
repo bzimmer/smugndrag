@@ -22,7 +22,6 @@
     [self setTitle:@"Drag an Image URL Here"];
     [self setTitleFont:[NSFont boldSystemFontOfSize:0]];
     [self setTitlePosition:NSBelowTop];
-//    [self setBorderType:NSBezelBorder];
     [[self titleCell] setAlignment:NSCenterTextAlignment];
     [self registerForDraggedTypes:[NSArray arrayWithObjects:NSStringPboardType, nil]];
   }

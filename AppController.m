@@ -11,17 +11,21 @@
 @implementation AppController
 
 - (void)awakeFromNib {
-  [imageSize removeAllItems];
-  [imageSize addItemsWithTitles:[NSArray arrayWithObjects:@"S", @"M", @"L", @"XL", nil]];
+  NSArray *sizes = [NSArray arrayWithObjects:@"S", @"M", @"L", @"XL", nil];
+  [imageSize addItemsWithTitles:sizes];
+  [destinationSize addItemsWithTitles:sizes];
   
   // why isn't this automatically done with NSUserDefaultsController?
   NSString *pref = [[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"];
-  if(pref != nil) {
-    [imageSize selectItemWithTitle:pref];
-  }
+  [imageSize selectItemWithTitle:(pref == nil) ? @"M" : pref];
+  pref = [[NSUserDefaults standardUserDefaults] objectForKey:@"destinationSize"];
+  [destinationSize selectItemWithTitle:(pref == nil) ? @"M" : pref];
+  NSInteger tag = [[NSUserDefaults standardUserDefaults] integerForKey:@"destination"];
+  [destination selectCellWithTag:tag];
+  [self destinationChanged:nil];
 }
 
-- (NSString *)blogURL:(NSURL *)url withDescription:(NSString *)description {
+- (NSString *)blogURL:(NSURL *)url {
   if(nil == url) {
     return nil;
   }
@@ -34,20 +38,26 @@
     return nil;
   }
 
-  if(nil == description) {
-    description = @"";
+  NSString *description = [imageDescription stringValue];
+  NSString *dest = @"";
+  if([[destination selectedCell] tag] == SDLightbox) {
+    dest = [NSString stringWithFormat:@"-%@-LB", [destinationSize titleOfSelectedItem]];
   }
 
   NSString *size = [imageSize titleOfSelectedItem];
-  NSString *format = @"<a href='http://%@%@#%@'><img src='http://%@/photos/%@-%@.jpg' alt='%@'></a>";
-  NSString *link = [NSString stringWithFormat:format, host, path, image, host, image, size, description];
+  NSString *format = @"<a href='http://%@%@#%@%@'><img src='http://%@/photos/%@-%@.jpg' alt='%@'></a>";
+  NSString *link = [NSString stringWithFormat:format, host, path, image, dest, host, image, size, description];
 
   return link;
 }
 
+- (IBAction)destinationChanged:(id)sender {
+  [destinationSize setEnabled:([[destination selectedCell] tag] == SDLightbox)];
+}
+
 - (BOOL)smugNDragURLDidChange:(NSString *)dragged {
 
-  NSString *link = [self blogURL:[NSURL URLWithString:dragged] withDescription:[imageDescription stringValue]];
+  NSString *link = [self blogURL:[NSURL URLWithString:dragged]];
   if(link == nil) {
     return NO;
   }

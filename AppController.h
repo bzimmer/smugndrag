@@ -8,12 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 
+enum {
+  SDGallery = 0,
+  SDLightbox = 1
+};
+typedef NSUInteger SDDestination;
+
 @interface AppController : NSObject {
   IBOutlet id imageSize;
   IBOutlet id imageDescription;
+  IBOutlet id destination;
+  IBOutlet id destinationSize;
 }
 
 - (BOOL)smugNDragURLDidChange:(NSString *)string;
-- (NSString *)blogURL:(NSURL *)imageURL withDescription:(NSString *)description;
+- (NSString *)blogURL:(NSURL *)imageURL;
+
+- (IBAction)destinationChanged:(id)sender;
 
 @end
