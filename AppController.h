@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 enum {
-  SDGallery = 0,
+  SDGallery  = 0,
   SDLightbox = 1
 };
 typedef NSUInteger SDDestination;

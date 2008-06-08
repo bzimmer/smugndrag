@@ -11,6 +11,10 @@
         font-weight: normal;
         margin: 1.5em 0;
       }
+      h2, h3{
+        font-size: 1.15em;
+        font-weight: normal;
+      }
       p{
         line-height: 1.75em;
       }
@@ -21,21 +25,27 @@
 
   <h1>Introduction</h1>
 
-  SmugNDrag automates the creation of links used to display images in a
-  blog with the ability to click-thru and display the photo in it's
-  SmugMug gallery.
+  SmugNDrag automates the creation of image links for SmugMug-managed images.
 
   <h1>Usage</h1>
 
-  <p><img src="images/drag.png"/></p>
-
   To use, navigate to the desired image in a SmugMug gallery with your
-  browser and drag the url to SmugNDrag.  The description of the image
-  can be entered in the text field and will be used as the <code>alt</code>
-  attribute in the <code>img</code> element.  To change the size of the image
-  referenced at SmugMug choose the appropriate item in the dropdown.
-  The correctly formatted bloggable url will then be copied to the pasteboard
-  for use in the editor of your choice.
+  browser and drag the url to SmugNDrag.
 
+  <p><img src="images/drag_1_3.png"/></p>
+    
+  <h2>Blog</h2>
+  
+  If a description is entered, it will be used to describe the image in the event
+  the image does not display.  The size dropdown will determine the size of the
+  image displayed in the page.
+  
+  <h2>SmugMug</h2>
+  
+  When the image is clicked, the browser will be taken to SmugMug to display
+  the image either in the gallery or the lightbox, depending on the destination
+  choice.  If the lightbox is chosen, the size dropdown will determine the image
+  size.
+  
   </body>
 </html>
