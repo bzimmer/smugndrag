@@ -12,7 +12,9 @@
 
 - (void)awakeFromNib {
   NSArray *sizes = [NSArray arrayWithObjects:@"S", @"M", @"L", @"XL", nil];
+  [imageSize removeAllItems];
   [imageSize addItemsWithTitles:sizes];
+  [destinationSize removeAllItems];
   [destinationSize addItemsWithTitles:sizes];
   
   // why isn't this automatically done with NSUserDefaultsController?
