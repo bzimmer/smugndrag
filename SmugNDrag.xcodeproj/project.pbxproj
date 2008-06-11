@@ -15,6 +15,10 @@
 		884939130DFF1F4D00294ADC /* SmugNDrag.xml in Resources */ = {isa = PBXBuildFile; fileRef = 884939120DFF1F4D00294ADC /* SmugNDrag.xml */; };
 		88855B560DF6E2B2008E90FE /* SmugNDrag.icns in Resources */ = {isa = PBXBuildFile; fileRef = 88855B550DF6E2B2008E90FE /* SmugNDrag.icns */; };
 		88A751BE0DFF1837002AFFCF /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 88A751BD0DFF1837002AFFCF /* ChangeLog */; };
+		88B58D310DFF91E700F92B2C /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B58D300DFF91E700F92B2C /* DBPrefsWindowController.m */; };
+		88B58D350DFF921900F92B2C /* Advanced.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B58D320DFF921900F92B2C /* Advanced.png */; };
+		88B58D360DFF921900F92B2C /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B58D330DFF921900F92B2C /* General.png */; };
+		88B58D370DFF921900F92B2C /* Updates.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B58D340DFF921900F92B2C /* Updates.png */; };
 		88C6F9170DFF7ADC001C71E7 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */; };
 		88C6F9210DFF7D71001C71E7 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 88C6F9200DFF7D71001C71E7 /* Preferences.nib */; };
 		88C717AA0DF84E92003C679D /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C717A90DF84E92003C679D /* AppController.m */; };
@@ -55,6 +59,11 @@
 		884939120DFF1F4D00294ADC /* SmugNDrag.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SmugNDrag.xml; sourceTree = "<group>"; };
 		88855B550DF6E2B2008E90FE /* SmugNDrag.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SmugNDrag.icns; sourceTree = "<group>"; };
 		88A751BD0DFF1837002AFFCF /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		88B58D2F0DFF91E700F92B2C /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
+		88B58D300DFF91E700F92B2C /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
+		88B58D320DFF921900F92B2C /* Advanced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Advanced.png; sourceTree = "<group>"; };
+		88B58D330DFF921900F92B2C /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
+		88B58D340DFF921900F92B2C /* Updates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Updates.png; sourceTree = "<group>"; };
 		88C6F9150DFF7ADC001C71E7 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		88C6F9200DFF7D71001C71E7 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Preferences.nib; sourceTree = "<group>"; };
@@ -81,6 +90,14 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				88C717A80DF84E92003C679D /* AppController.h */,
+				88C717A90DF84E92003C679D /* AppController.m */,
+				88417EB10DF614620085D890 /* SmugNDragView.h */,
+				88417EB20DF614620085D890 /* SmugNDragView.m */,
+				88C6F9150DFF7ADC001C71E7 /* PreferenceController.h */,
+				88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */,
+				88B58D2F0DFF91E700F92B2C /* DBPrefsWindowController.h */,
+				88B58D300DFF91E700F92B2C /* DBPrefsWindowController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -115,7 +132,6 @@
 		29B97314FDCFA39411CA2CEA /* SmugNDrag */ = {
 			isa = PBXGroup;
 			children = (
-				884939120DFF1F4D00294ADC /* SmugNDrag.xml */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -137,20 +153,18 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				884939120DFF1F4D00294ADC /* SmugNDrag.xml */,
+				88B58D320DFF921900F92B2C /* Advanced.png */,
+				88B58D330DFF921900F92B2C /* General.png */,
+				88B58D340DFF921900F92B2C /* Updates.png */,
 				88C6F9200DFF7D71001C71E7 /* Preferences.nib */,
 				88371C610DF892F100FC670F /* SmugNDrag Help */,
 				88371C5A0DF8928300FC670F /* About */,
-				88C717A80DF84E92003C679D /* AppController.h */,
-				88C717A90DF84E92003C679D /* AppController.m */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				88855B550DF6E2B2008E90FE /* SmugNDrag.icns */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
-				88417EB10DF614620085D890 /* SmugNDragView.h */,
-				88417EB20DF614620085D890 /* SmugNDragView.m */,
 				88A751BD0DFF1837002AFFCF /* ChangeLog */,
-				88C6F9150DFF7ADC001C71E7 /* PreferenceController.h */,
-				88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -226,6 +240,9 @@
 				88A751BE0DFF1837002AFFCF /* ChangeLog in Resources */,
 				884939130DFF1F4D00294ADC /* SmugNDrag.xml in Resources */,
 				88C6F9210DFF7D71001C71E7 /* Preferences.nib in Resources */,
+				88B58D350DFF921900F92B2C /* Advanced.png in Resources */,
+				88B58D360DFF921900F92B2C /* General.png in Resources */,
+				88B58D370DFF921900F92B2C /* Updates.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +257,7 @@
 				88417EB30DF614620085D890 /* SmugNDragView.m in Sources */,
 				88C717AA0DF84E92003C679D /* AppController.m in Sources */,
 				88C6F9170DFF7ADC001C71E7 /* PreferenceController.m in Sources */,
+				88B58D310DFF91E700F92B2C /* DBPrefsWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

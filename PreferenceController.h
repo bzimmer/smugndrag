@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DBPrefsWindowController.h";
 
-@interface PreferenceController : NSWindowController {
-  IBOutlet NSButton *automatic;
-  IBOutlet NSButton *anonymous;
+@interface PreferenceController : DBPrefsWindowController {
+  IBOutlet NSView *generalPreferenceView;
+  IBOutlet NSView *updatesPreferenceView;
 }
 @end

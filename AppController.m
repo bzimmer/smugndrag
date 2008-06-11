@@ -26,10 +26,7 @@
 }
 
 - (IBAction)showPreferencePanel:(id)sender {
-  if(!preferenceController) {
-    preferenceController = [[PreferenceController alloc] init];
-  }
-  [preferenceController showWindow:self];
+  [[PreferenceController sharedPrefsWindowController] showWindow:self];
 }
 
 - (NSString *)blogURL:(NSURL *)url {
