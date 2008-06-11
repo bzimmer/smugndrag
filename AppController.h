@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PreferenceController.h"
 
 enum {
   SDGallery  = 0,
@@ -19,11 +20,13 @@ typedef NSUInteger SDDestination;
   IBOutlet id imageDescription;
   IBOutlet id destination;
   IBOutlet id destinationSize;
+  PreferenceController *preferenceController;
 }
 
 - (BOOL)smugNDragURLDidChange:(NSString *)string;
 - (NSString *)blogURL:(NSURL *)imageURL;
 
 - (IBAction)destinationChanged:(id)sender;
+- (IBAction)showPreferencePanel:(id)sender;
 
 @end

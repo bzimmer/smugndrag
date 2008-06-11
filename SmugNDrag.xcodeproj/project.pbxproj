@@ -10,7 +10,13 @@
 		88298F190DF6E44700A1B47D /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 88298F180DF6E44700A1B47D /* Credits.html */; };
 		88371C620DF892F100FC670F /* SmugNDrag Help in Resources */ = {isa = PBXBuildFile; fileRef = 88371C610DF892F100FC670F /* SmugNDrag Help */; };
 		88417EB30DF614620085D890 /* SmugNDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88417EB20DF614620085D890 /* SmugNDragView.m */; };
+		884938D90DFF1DBF00294ADC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884938D80DFF1DBF00294ADC /* Sparkle.framework */; };
+		884939050DFF1DED00294ADC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 884938D80DFF1DBF00294ADC /* Sparkle.framework */; };
+		884939130DFF1F4D00294ADC /* SmugNDrag.xml in Resources */ = {isa = PBXBuildFile; fileRef = 884939120DFF1F4D00294ADC /* SmugNDrag.xml */; };
 		88855B560DF6E2B2008E90FE /* SmugNDrag.icns in Resources */ = {isa = PBXBuildFile; fileRef = 88855B550DF6E2B2008E90FE /* SmugNDrag.icns */; };
+		88A751BE0DFF1837002AFFCF /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 88A751BD0DFF1837002AFFCF /* ChangeLog */; };
+		88C6F9170DFF7ADC001C71E7 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */; };
+		88C6F9210DFF7D71001C71E7 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 88C6F9200DFF7D71001C71E7 /* Preferences.nib */; };
 		88C717AA0DF84E92003C679D /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C717A90DF84E92003C679D /* AppController.m */; };
 		88EBB6F30DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 88EBB6F20DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -18,6 +24,19 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8840E69E0DFEFD510034B7A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				884939050DFF1DED00294ADC /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -32,7 +51,13 @@
 		88371C610DF892F100FC670F /* SmugNDrag Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SmugNDrag Help"; sourceTree = "<group>"; };
 		88417EB10DF614620085D890 /* SmugNDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmugNDragView.h; sourceTree = "<group>"; };
 		88417EB20DF614620085D890 /* SmugNDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmugNDragView.m; sourceTree = "<group>"; };
+		884938D80DFF1DBF00294ADC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../Frameworks/Sparkle 1.5b1/Sparkle.framework"; sourceTree = SOURCE_ROOT; };
+		884939120DFF1F4D00294ADC /* SmugNDrag.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SmugNDrag.xml; sourceTree = "<group>"; };
 		88855B550DF6E2B2008E90FE /* SmugNDrag.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SmugNDrag.icns; sourceTree = "<group>"; };
+		88A751BD0DFF1837002AFFCF /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		88C6F9150DFF7ADC001C71E7 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		88C6F9200DFF7D71001C71E7 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Preferences.nib; sourceTree = "<group>"; };
 		88C717A80DF84E92003C679D /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		88C717A90DF84E92003C679D /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		88EBB6F20DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Lightroom Icon Readme.rtf"; sourceTree = "<group>"; };
@@ -46,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				884938D90DFF1DBF00294ADC /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +88,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				884938D80DFF1DBF00294ADC /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -88,6 +115,7 @@
 		29B97314FDCFA39411CA2CEA /* SmugNDrag */ = {
 			isa = PBXGroup;
 			children = (
+				884939120DFF1F4D00294ADC /* SmugNDrag.xml */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -109,6 +137,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88C6F9200DFF7D71001C71E7 /* Preferences.nib */,
 				88371C610DF892F100FC670F /* SmugNDrag Help */,
 				88371C5A0DF8928300FC670F /* About */,
 				88C717A80DF84E92003C679D /* AppController.h */,
@@ -119,6 +148,9 @@
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				88417EB10DF614620085D890 /* SmugNDragView.h */,
 				88417EB20DF614620085D890 /* SmugNDragView.m */,
+				88A751BD0DFF1837002AFFCF /* ChangeLog */,
+				88C6F9150DFF7ADC001C71E7 /* PreferenceController.h */,
+				88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -151,6 +183,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				8840E69E0DFEFD510034B7A1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -190,6 +223,9 @@
 				88298F190DF6E44700A1B47D /* Credits.html in Resources */,
 				88371C620DF892F100FC670F /* SmugNDrag Help in Resources */,
 				88EBB6F30DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf in Resources */,
+				88A751BE0DFF1837002AFFCF /* ChangeLog in Resources */,
+				884939130DFF1F4D00294ADC /* SmugNDrag.xml in Resources */,
+				88C6F9210DFF7D71001C71E7 /* Preferences.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +239,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				88417EB30DF614620085D890 /* SmugNDragView.m in Sources */,
 				88C717AA0DF84E92003C679D /* AppController.m in Sources */,
+				88C6F9170DFF7ADC001C71E7 /* PreferenceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +269,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../Frameworks/Sparkle 1.5b1\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -250,6 +292,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../Frameworks/Sparkle 1.5b1\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmugNDrag_Prefix.pch;

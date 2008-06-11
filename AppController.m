@@ -25,6 +25,13 @@
   [self destinationChanged:nil];
 }
 
+- (IBAction)showPreferencePanel:(id)sender {
+  if(!preferenceController) {
+    preferenceController = [[PreferenceController alloc] init];
+  }
+  [preferenceController showWindow:self];
+}
+
 - (NSString *)blogURL:(NSURL *)url {
   if(nil == url) {
     return nil;
