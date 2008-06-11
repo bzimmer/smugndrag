@@ -30,5 +30,7 @@
 	<string>SmugNDrag Help</string>
   <key>SUFeedURL</key>
   <string>http://ziclix.com/software/SmugNDrag.xml</string>
+  <key>SUEnableAutomaticChecksKey</key>
+  <true/>
 </dict>
 </plist>
