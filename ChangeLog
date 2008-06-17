@@ -3,10 +3,10 @@ Please refer to the SmugNDrag mercurial repository for exhaustive change details
 SmugNDrag ChangeLog
 ===================
 
-Changes in v1.4 ():
-  * fixed UI spacing issues
+Changes in v1.4 (2008-06-16):
+  * fixed UI issues
   * added Sparkle framework for automatic updating
-  * added Preferences panel
+  * added Preferences panel for Sparkle
 
 Changes in v1.3 (2008-06-08):
   * added SmugMug destination options
