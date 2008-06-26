@@ -17,7 +17,6 @@
   [destinationSize removeAllItems];
   [destinationSize addItemsWithTitles:sizes];
   
-  // why isn't this automatically done with NSUserDefaultsController?
   NSString *pref = [[NSUserDefaults standardUserDefaults] objectForKey:@"imageSize"];
   [imageSize selectItemWithTitle:(pref == nil) ? @"M" : pref];
   pref = [[NSUserDefaults standardUserDefaults] objectForKey:@"destinationSize"];
@@ -44,17 +43,28 @@
     return nil;
   }
 
-  NSString *description = [imageDescription stringValue];
+  NSString *alt = [imageDescription stringValue];
+  NSString *size = [imageSize titleOfSelectedItem];
   NSString *dest = @"";
   if([[destination selectedCell] tag] == SDLightbox) {
     dest = [NSString stringWithFormat:@"-%@-LB", [destinationSize titleOfSelectedItem]];
   }
 
-  NSString *size = [imageSize titleOfSelectedItem];
-  NSString *format = @"<a href='http://%@%@#%@%@'><img src='http://%@/photos/%@-%@.jpg' alt='%@'></a>";
-  NSString *link = [NSString stringWithFormat:format, host, path, image, dest, host, image, size, description];
+  NSXMLElement *a = [NSXMLNode elementWithName:@"a"];
+  [a addAttribute:[NSXMLNode attributeWithName:@"href"
+                                   stringValue:[NSString stringWithFormat:@"http://%@%@#%@%@",
+                                                host, path, image, dest]]];
+  NSXMLElement *img = [NSXMLNode elementWithName:@"img"];
+  [img addAttribute:[NSXMLNode attributeWithName:@"src"
+                                     stringValue:[NSString stringWithFormat:@"http://%@/photos/%@-%@.jpg",
+                                                  host, image, size]]];
+  [img addAttribute:[NSXMLNode attributeWithName:@"alt" stringValue:alt]];
+  [a addChild:img];
 
-  return link;
+  NSXMLDocument *xml = [[NSXMLDocument alloc] initWithRootElement:a];
+  [xml setDocumentContentKind:NSXMLDocumentXHTMLKind];
+
+  return [xml XMLString];
 }
 
 - (IBAction)destinationChanged:(id)sender {
