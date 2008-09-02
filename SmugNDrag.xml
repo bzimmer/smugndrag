@@ -5,6 +5,22 @@
     <link>http://code.google.com/p/smugndrag</link>
     <language>en</language>
     <item>
+      <title>Version 1.5</title>
+      <description><![CDATA[
+      <h3>Version 1.5</h3>
+      <ul><li>added the ability to paste the description</li></ul>
+      <ul><li>only add the alt attribute if the description field is populated</li></ul>
+      <h3>Version 1.4</h3>
+      <ul><li>fixed display issue where left side of main window was clipped</li></ul>
+      <ul><li>added Sparkle support for automatic updates</li></ul>
+      <h3>Version 1.3</h3>
+      <ul><li>added SmugMug destination support</li></ul>
+      ]]></description>
+      <sparkle:minimumSystemVersion>10.5.0</sparkle:minimumSystemVersion>
+      <pubDate>Wed Sep 03 00:00:00 PDT 2008</pubDate>
+      <enclosure url="http://smugndrag.googlecode.com/files/SmugNDrag_1_4.zip" sparkle:version="1.4" length="1013157" type="application/zip"/>
+    </item>
+    <item>
       <title>Version 1.4</title>
       <description><![CDATA[
       <h3>Version 1.4</h3>

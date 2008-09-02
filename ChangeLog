@@ -3,6 +3,10 @@ Please refer to the SmugNDrag mercurial repository for exhaustive change details
 SmugNDrag ChangeLog
 ===================
 
+Changes in v1.4 (2008-09-02):
+  * added the ability to paste the description
+  * only add the alt attribute if the description field is populated
+
 Changes in v1.4 (2008-06-16):
   * fixed UI issues
   * added Sparkle framework for automatic updating
