@@ -10,8 +10,6 @@
 		88298F190DF6E44700A1B47D /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 88298F180DF6E44700A1B47D /* Credits.html */; };
 		88371C620DF892F100FC670F /* SmugNDrag Help in Resources */ = {isa = PBXBuildFile; fileRef = 88371C610DF892F100FC670F /* SmugNDrag Help */; };
 		88417EB30DF614620085D890 /* SmugNDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88417EB20DF614620085D890 /* SmugNDragView.m */; };
-		884938D90DFF1DBF00294ADC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884938D80DFF1DBF00294ADC /* Sparkle.framework */; };
-		884939050DFF1DED00294ADC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 884938D80DFF1DBF00294ADC /* Sparkle.framework */; };
 		884939130DFF1F4D00294ADC /* SmugNDrag.xml in Resources */ = {isa = PBXBuildFile; fileRef = 884939120DFF1F4D00294ADC /* SmugNDrag.xml */; };
 		88855B560DF6E2B2008E90FE /* SmugNDrag.icns in Resources */ = {isa = PBXBuildFile; fileRef = 88855B550DF6E2B2008E90FE /* SmugNDrag.icns */; };
 		88A751BE0DFF1837002AFFCF /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 88A751BD0DFF1837002AFFCF /* ChangeLog */; };
@@ -23,6 +21,8 @@
 		88C6F9210DFF7D71001C71E7 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 88C6F9200DFF7D71001C71E7 /* Preferences.nib */; };
 		88C717AA0DF84E92003C679D /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C717A90DF84E92003C679D /* AppController.m */; };
 		88EBB6F30DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 88EBB6F20DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf */; };
+		88F1511C0E6113F70058D6E5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F1511B0E6113F70058D6E5 /* Sparkle.framework */; };
+		88F151470E61141F0058D6E5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 88F1511B0E6113F70058D6E5 /* Sparkle.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				884939050DFF1DED00294ADC /* Sparkle.framework in CopyFiles */,
+				88F151470E61141F0058D6E5 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +55,6 @@
 		88371C610DF892F100FC670F /* SmugNDrag Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SmugNDrag Help"; sourceTree = "<group>"; };
 		88417EB10DF614620085D890 /* SmugNDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmugNDragView.h; sourceTree = "<group>"; };
 		88417EB20DF614620085D890 /* SmugNDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmugNDragView.m; sourceTree = "<group>"; };
-		884938D80DFF1DBF00294ADC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../Frameworks/Sparkle 1.5b1/Sparkle.framework"; sourceTree = SOURCE_ROOT; };
 		884939120DFF1F4D00294ADC /* SmugNDrag.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SmugNDrag.xml; sourceTree = "<group>"; };
 		88855B550DF6E2B2008E90FE /* SmugNDrag.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SmugNDrag.icns; sourceTree = "<group>"; };
 		88A751BD0DFF1837002AFFCF /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		88C717A80DF84E92003C679D /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		88C717A90DF84E92003C679D /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		88EBB6F20DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Lightroom Icon Readme.rtf"; sourceTree = "<group>"; };
+		88F1511B0E6113F70058D6E5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../../../Library/Frameworks/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SmugNDrag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmugNDrag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,7 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				884938D90DFF1DBF00294ADC /* Sparkle.framework in Frameworks */,
+				88F1511C0E6113F70058D6E5 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				884938D80DFF1DBF00294ADC /* Sparkle.framework */,
+				88F1511B0E6113F70058D6E5 /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -295,6 +295,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../Frameworks/Sparkle 1.5b1\"",
+					"\"$(SRCROOT)/../../../Library/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -326,6 +327,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../Frameworks/Sparkle 1.5b1\"",
+					"\"$(SRCROOT)/../../../Library/Frameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
