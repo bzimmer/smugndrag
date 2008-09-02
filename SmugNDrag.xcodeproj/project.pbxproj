@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8827F55E0E6D90B1004CA93F /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8827F55D0E6D90B1004CA93F /* Preferences.xib */; };
+		8827F5620E6D90D4004CA93F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8827F5610E6D90D4004CA93F /* MainMenu.xib */; };
 		88298F190DF6E44700A1B47D /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 88298F180DF6E44700A1B47D /* Credits.html */; };
 		88371C620DF892F100FC670F /* SmugNDrag Help in Resources */ = {isa = PBXBuildFile; fileRef = 88371C610DF892F100FC670F /* SmugNDrag Help */; };
 		88417EB30DF614620085D890 /* SmugNDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88417EB20DF614620085D890 /* SmugNDragView.m */; };
@@ -18,12 +20,10 @@
 		88B58D360DFF921900F92B2C /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B58D330DFF921900F92B2C /* General.png */; };
 		88B58D370DFF921900F92B2C /* Updates.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B58D340DFF921900F92B2C /* Updates.png */; };
 		88C6F9170DFF7ADC001C71E7 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */; };
-		88C6F9210DFF7D71001C71E7 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 88C6F9200DFF7D71001C71E7 /* Preferences.nib */; };
 		88C717AA0DF84E92003C679D /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C717A90DF84E92003C679D /* AppController.m */; };
 		88EBB6F30DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 88EBB6F20DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf */; };
 		88F1511C0E6113F70058D6E5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F1511B0E6113F70058D6E5 /* Sparkle.framework */; };
 		88F151470E61141F0058D6E5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 88F1511B0E6113F70058D6E5 /* Sparkle.framework */; };
-		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -47,10 +47,11 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* SmugNDrag_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmugNDrag_Prefix.pch; sourceTree = "<group>"; };
+		8827F55D0E6D90B1004CA93F /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		8827F5610E6D90D4004CA93F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		88298F180DF6E44700A1B47D /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		88371C610DF892F100FC670F /* SmugNDrag Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SmugNDrag Help"; sourceTree = "<group>"; };
 		88417EB10DF614620085D890 /* SmugNDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmugNDragView.h; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		88B58D340DFF921900F92B2C /* Updates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Updates.png; sourceTree = "<group>"; };
 		88C6F9150DFF7ADC001C71E7 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		88C6F9160DFF7ADC001C71E7 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
-		88C6F9200DFF7D71001C71E7 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Preferences.nib; sourceTree = "<group>"; };
 		88C717A80DF84E92003C679D /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		88C717A90DF84E92003C679D /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		88EBB6F20DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Lightroom Icon Readme.rtf"; sourceTree = "<group>"; };
@@ -153,17 +153,17 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8827F5610E6D90D4004CA93F /* MainMenu.xib */,
+				8827F55D0E6D90B1004CA93F /* Preferences.xib */,
 				884939120DFF1F4D00294ADC /* SmugNDrag.xml */,
 				88B58D320DFF921900F92B2C /* Advanced.png */,
 				88B58D330DFF921900F92B2C /* General.png */,
 				88B58D340DFF921900F92B2C /* Updates.png */,
-				88C6F9200DFF7D71001C71E7 /* Preferences.nib */,
 				88371C610DF892F100FC670F /* SmugNDrag Help */,
 				88371C5A0DF8928300FC670F /* About */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				88855B550DF6E2B2008E90FE /* SmugNDrag.icns */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				88A751BD0DFF1837002AFFCF /* ChangeLog */,
 			);
 			name = Resources;
@@ -231,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				88855B560DF6E2B2008E90FE /* SmugNDrag.icns in Resources */,
 				88298F190DF6E44700A1B47D /* Credits.html in Resources */,
@@ -239,10 +238,11 @@
 				88EBB6F30DF8936A00EAA6A2 /* Lightroom Icon Readme.rtf in Resources */,
 				88A751BE0DFF1837002AFFCF /* ChangeLog in Resources */,
 				884939130DFF1F4D00294ADC /* SmugNDrag.xml in Resources */,
-				88C6F9210DFF7D71001C71E7 /* Preferences.nib in Resources */,
 				88B58D350DFF921900F92B2C /* Advanced.png in Resources */,
 				88B58D360DFF921900F92B2C /* General.png in Resources */,
 				88B58D370DFF921900F92B2C /* Updates.png in Resources */,
+				8827F55E0E6D90B1004CA93F /* Preferences.xib in Resources */,
+				8827F5620E6D90D4004CA93F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +270,6 @@
 				089C165DFE840E0CC02AAC07 /* English */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				29B97319FDCFA39411CA2CEA /* English */,
-			);
-			name = MainMenu.nib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
