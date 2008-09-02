@@ -58,7 +58,9 @@
   [img addAttribute:[NSXMLNode attributeWithName:@"src"
                                      stringValue:[NSString stringWithFormat:@"http://%@/photos/%@-%@.jpg",
                                                   host, image, size]]];
-  [img addAttribute:[NSXMLNode attributeWithName:@"alt" stringValue:alt]];
+  if([alt length] > 0) {
+    [img addAttribute:[NSXMLNode attributeWithName:@"alt" stringValue:alt]];
+  }
   [a addChild:img];
 
   NSXMLDocument *xml = [[NSXMLDocument alloc] initWithRootElement:a];
