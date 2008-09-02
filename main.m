@@ -3,7 +3,7 @@
 //  SmugNDrag
 //
 //  Created by Brian Zimmer on 6/3/08.
-//  Copyright __MyCompanyName__ 2008. All rights reserved.
+//  Copyright 2008 Brian Zimmer. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
