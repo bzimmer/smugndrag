@@ -18,7 +18,7 @@
       ]]></description>
       <sparkle:minimumSystemVersion>10.5.0</sparkle:minimumSystemVersion>
       <pubDate>Wed Sep 03 00:00:00 PDT 2008</pubDate>
-      <enclosure url="http://smugndrag.googlecode.com/files/SmugNDrag_1_5.zip" sparkle:version="1.4" length="999961" type="application/zip"/>
+      <enclosure url="http://smugndrag.googlecode.com/files/SmugNDrag_1_5.zip" sparkle:version="1.5" length="999961" type="application/zip"/>
     </item>
     <item>
       <title>Version 1.4</title>
