@@ -7,6 +7,7 @@
 //
 
 #import "AppController.h"
+#import <ObjectiveSmug/ObjectiveSmug.h>
 
 @implementation AppController
 
@@ -43,17 +44,11 @@
     return nil;
   }
 
+  NSXMLElement *e = nil;
   NSString *alt = [imageDescription stringValue];
   NSString *size = [imageSize titleOfSelectedItem];
-  NSString *dest = @"";
-  if([[destination selectedCell] tag] == SDLightbox) {
-    dest = [NSString stringWithFormat:@"-%@-LB", [destinationSize titleOfSelectedItem]];
-  }
+  int destinationTag = [[destination selectedCell] tag];
 
-  NSXMLElement *a = [NSXMLNode elementWithName:@"a"];
-  [a addAttribute:[NSXMLNode attributeWithName:@"href"
-                                   stringValue:[NSString stringWithFormat:@"http://%@%@#%@%@",
-                                                host, path, image, dest]]];
   NSXMLElement *img = [NSXMLNode elementWithName:@"img"];
   [img addAttribute:[NSXMLNode attributeWithName:@"src"
                                      stringValue:[NSString stringWithFormat:@"http://%@/photos/%@-%@.jpg",
@@ -61,10 +56,24 @@
   if([alt length] > 0) {
     [img addAttribute:[NSXMLNode attributeWithName:@"alt" stringValue:alt]];
   }
-  [a addChild:img];
+  
+  e = img;
+  if(destinationTag > SDNone) {
+    NSString *dest = @"";
+    if(destinationTag == SDLightbox) {
+      dest = [NSString stringWithFormat:@"-%@-LB", [destinationSize titleOfSelectedItem]];
+    }
+    
+    NSXMLElement *a = [NSXMLNode elementWithName:@"a"];
+    [a addAttribute:[NSXMLNode attributeWithName:@"href"
+                                     stringValue:[NSString stringWithFormat:@"http://%@%@#%@%@",
+                                                  host, path, image, dest]]];
+    [a addChild:img];
+    e = a;
+  }
 
-  NSXMLDocument *xml = [[NSXMLDocument alloc] initWithRootElement:a];
-  [xml setDocumentContentKind:NSXMLDocumentXHTMLKind];
+  NSXMLDocument *xml = [[[NSXMLDocument alloc] initWithRootElement:e] autorelease];
+  [[xml autorelease] setDocumentContentKind:NSXMLDocumentXHTMLKind];
 
   return [xml XMLString];
 }

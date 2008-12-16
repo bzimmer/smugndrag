@@ -10,6 +10,7 @@
 #import "PreferenceController.h"
 
 enum {
+  SDNone  = -1,
   SDGallery  = 0,
   SDLightbox = 1
 };

@@ -13,6 +13,8 @@
 		88371C620DF892F100FC670F /* SmugNDrag Help in Resources */ = {isa = PBXBuildFile; fileRef = 88371C610DF892F100FC670F /* SmugNDrag Help */; };
 		88417EB30DF614620085D890 /* SmugNDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88417EB20DF614620085D890 /* SmugNDragView.m */; };
 		884939130DFF1F4D00294ADC /* SmugNDrag.xml in Resources */ = {isa = PBXBuildFile; fileRef = 884939120DFF1F4D00294ADC /* SmugNDrag.xml */; };
+		885FE4160EA8E05300BA1539 /* ObjectiveSmug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885FE4150EA8E05300BA1539 /* ObjectiveSmug.framework */; };
+		885FE41C0EA8E05C00BA1539 /* ObjectiveSmug.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 885FE4150EA8E05300BA1539 /* ObjectiveSmug.framework */; };
 		88855B560DF6E2B2008E90FE /* SmugNDrag.icns in Resources */ = {isa = PBXBuildFile; fileRef = 88855B550DF6E2B2008E90FE /* SmugNDrag.icns */; };
 		88A751BE0DFF1837002AFFCF /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 88A751BD0DFF1837002AFFCF /* ChangeLog */; };
 		88B58D310DFF91E700F92B2C /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B58D300DFF91E700F92B2C /* DBPrefsWindowController.m */; };
@@ -36,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				885FE41C0EA8E05C00BA1539 /* ObjectiveSmug.framework in CopyFiles */,
 				88F151470E61141F0058D6E5 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +60,7 @@
 		88417EB10DF614620085D890 /* SmugNDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmugNDragView.h; sourceTree = "<group>"; };
 		88417EB20DF614620085D890 /* SmugNDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmugNDragView.m; sourceTree = "<group>"; };
 		884939120DFF1F4D00294ADC /* SmugNDrag.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SmugNDrag.xml; sourceTree = "<group>"; };
+		885FE4150EA8E05300BA1539 /* ObjectiveSmug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveSmug.framework; path = ../objectivesmug/build/Debug/ObjectiveSmug.framework; sourceTree = SOURCE_ROOT; };
 		88855B550DF6E2B2008E90FE /* SmugNDrag.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SmugNDrag.icns; sourceTree = "<group>"; };
 		88A751BD0DFF1837002AFFCF /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
 		88B58D2F0DFF91E700F92B2C /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				88F1511C0E6113F70058D6E5 /* Sparkle.framework in Frameworks */,
+				885FE4160EA8E05300BA1539 /* ObjectiveSmug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +110,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				885FE4150EA8E05300BA1539 /* ObjectiveSmug.framework */,
 				88F1511B0E6113F70058D6E5 /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -288,6 +294,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../Frameworks/Sparkle 1.5b1\"",
 					"\"$(SRCROOT)/../../../Library/Frameworks\"",
+					"\"$(SRCROOT)/../objectivesmug/build/Debug\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -320,6 +327,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../Frameworks/Sparkle 1.5b1\"",
 					"\"$(SRCROOT)/../../../Library/Frameworks\"",
+					"\"$(SRCROOT)/../objectivesmug/build/Debug\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
