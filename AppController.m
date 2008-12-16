@@ -7,7 +7,6 @@
 //
 
 #import "AppController.h"
-#import <ObjectiveSmug/ObjectiveSmug.h>
 
 @implementation AppController
 
