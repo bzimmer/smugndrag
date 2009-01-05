@@ -72,7 +72,7 @@
   }
 
   NSXMLDocument *xml = [[[NSXMLDocument alloc] initWithRootElement:e] autorelease];
-  [[xml autorelease] setDocumentContentKind:NSXMLDocumentXHTMLKind];
+  [xml setDocumentContentKind:NSXMLDocumentXHTMLKind];
 
   return [xml XMLString];
 }
