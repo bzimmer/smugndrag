@@ -64,16 +64,9 @@
     }
     
     NSXMLElement *a = [NSXMLNode elementWithName:@"a"];
-	if(destinationTag != SDShadowbox) {
-      [a addAttribute:[NSXMLNode attributeWithName:@"href"
-									   stringValue:[NSString stringWithFormat:@"http://%@%@#%@%@",
-													host, path, image, dest]]];
-	  } else {
-	    [a addAttribute:[NSXMLNode attributeWithName:@"href"
-										 stringValue:[NSString stringWithFormat:@"http://%@/photos/%@-%@.jpg",
-													  host, image, [destinationSize titleOfSelectedItem]]]];
-		[a addAttribute:[NSXMLNode attributeWithName:@"rel" stringValue:@"shadowbox"]];
-	}
+    [a addAttribute:[NSXMLNode attributeWithName:@"href"
+                                     stringValue:[NSString stringWithFormat:@"http://%@%@#%@%@",
+                                                  host, path, image, dest]]];
     [a addChild:img];
     e = a;
   }
@@ -85,12 +78,11 @@
 }
 
 - (IBAction)destinationChanged:(id)sender {
-  int tag = [[destination selectedCell] tag];
-  BOOL enabled = (tag == SDLightbox || tag == SDShadowbox);
-  [destinationSize setEnabled:enabled];
+  [destinationSize setEnabled:([[destination selectedCell] tag] == SDLightbox)];
 }
 
 - (BOOL)smugNDragURLDidChange:(NSString *)dragged {
+
   NSString *link = [self blogURL:[NSURL URLWithString:dragged]];
   if(link == nil) {
     return NO;
