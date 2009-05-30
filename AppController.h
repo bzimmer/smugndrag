@@ -12,7 +12,8 @@
 enum {
   SDNone  = -1,
   SDGallery  = 0,
-  SDLightbox = 1
+  SDLightbox = 1,
+  SDShadowbox = 2
 };
 typedef NSUInteger SDDestination;
 
